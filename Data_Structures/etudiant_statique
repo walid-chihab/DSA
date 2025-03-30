@@ -15,7 +15,7 @@ int main (){
     int nbr,i;//nbr c'est le nombre d'element qui est fixe par utilisateur
     printf ("----bonjour-------\n entrer votre n'ombre d'etudiant :");
     scanf ("%d",&nbr);
-    etudiant e[nbr];
+    etudiant e[nbr];//pas vraiment statique car la creation ets pas dans la compilation 
     for ( i=0 ;i< nbr; i++){ // remplisage par l'utilisateur
         printf ("pour etudiant_%d :\n",i+1);
         printf ("nom:");
