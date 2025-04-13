@@ -28,6 +28,17 @@ etudiant * cree_etudiant( int _age, float _moyenne, char _name[] ){
 	return nv_etudiant;
 }
 
+//affich les element de la liste etudiant 
+void affich_list(etudiant *tete){
+    etudiant *courant =tete;
+    while (courant != NULL ){
+        printf ("(name = %s , age = %d , moyenne = %.1f ) ~>",courant ->name, courant->age ,courant->moyenne);
+        courant = courant-> suivant;//poit sur la suivant du dernier node
+    }
+    printf("NULL");//
+    
+}
+
 int main (){
 	//cree un poiteur de type etudiant
 	 etudiant *tete;
@@ -42,6 +53,9 @@ int main (){
 	premier -> suivant = deuxiemme;
 	deuxiemme -> suivant = queue;
 	queue -> suivant = NULL ;
+
+	//appelant la fct affich_list avec largument tete
+	affich_list(tete);
 
 	return 0;
 }
