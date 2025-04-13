@@ -39,6 +39,17 @@ void affich_list(etudiant *tete){
     
 }
 
+//fct qui calcule la taile d'une liste
+int taill_list(etudiant *tete){
+    int i=0;
+    etudiant *courant=tete;
+    while (courant != NULL){
+        i++;
+        courant= courant ->suivant;
+    }
+    return i;
+}
+
 int main (){
 	//cree un poiteur de type etudiant
 	 etudiant *tete;
@@ -57,5 +68,8 @@ int main (){
 	//appelant la fct affich_list avec largument tete
 	affich_list(tete);
 
+
+	//appelant la fct taill_list pour calculer la taill
+	//printf ("la taille de votre liste est : %d",taill_list);
 	return 0;
 }
