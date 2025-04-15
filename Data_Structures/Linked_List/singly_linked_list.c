@@ -12,6 +12,20 @@ typedef	struct	etudiant {
 }etudiant;
 
 
+//fct qui cherch sur un element de la structure  spesifier puis affich tout les element du noued
+etudiant * search_element(etudiant * tete , char c[]){
+    etudiant *courant =tete;
+    while(courant != NULL){
+        if (strcmp(courant ->name,c) == 0){
+            printf ("les information de %s est : \n",courant->name);
+            return courant ;
+        }
+        courant=courant -> suivant;
+
+    }
+    return NULL;
+}
+
 //creation du fonction qui alloue ynamiquement de la memoire et initialise les champs 
 // fonction avec type de retoure etudiant
 etudiant * cree_etudiant( int _age, float _moyenne, char _name[] ){
@@ -72,10 +86,21 @@ int main (){
 	queue -> suivant = NULL ;
 
 	//appelant la fct affich_list avec largument tete
-	affich_list(tete);
+	//affich_list(tete);
 
 
 	//appelant la fct taill_list pour calculer la taill
-	//printf ("la taille de votre liste est : %d",taill_list);
+	//printf ("la taille de votre liste est : %d",taill_list(tete);
+	
+
+	//appelant la fct search_liste mais avant 
+        //char c[]="walid";
+        //etudiant * resultat =search_element(tete,c);
+        //if (resultat == NULL)
+        //    printf ("element pas trouvable!");
+        //else {
+        //    printf ("age = %d \n moyenne = %.1f", resultat->age ,resultat->moyenne);
+        //}
+
 	return 0;
 }
