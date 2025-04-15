@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 
+
 //creation de la structure 
 typedef	struct	etudiant {
 	int age;
@@ -28,6 +29,8 @@ etudiant * cree_etudiant( int _age, float _moyenne, char _name[] ){
 	return nv_etudiant;
 }
 
+
+
 //affich les element de la liste etudiant 
 void affich_list(etudiant *tete){
     etudiant *courant =tete;
@@ -39,6 +42,8 @@ void affich_list(etudiant *tete){
     
 }
 
+
+
 //fct qui calcule la taile d'une liste
 int taill_list(etudiant *tete){
     int i=0;
@@ -49,6 +54,7 @@ int taill_list(etudiant *tete){
     }
     return i;
 }
+
 
 int main (){
 	//cree un poiteur de type etudiant
