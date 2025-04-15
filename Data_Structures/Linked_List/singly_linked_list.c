@@ -57,6 +57,18 @@ void affich_list(etudiant *tete){
 }
 
 
+// ajout un element au debut du liste
+etudiant* add_first_list(etudiant *tete, int _age, float _moyenne, char _name[]) {
+    etudiant *nv = cree_etudiant(_age, _moyenne, _name);
+    if (nv == NULL) {
+        printf("Erreur d'allocation de mémoire.\n");
+        return tete;
+    }
+    nv->suivant = tete;
+    tete = nv;
+    return tete;
+}
+
 
 //fct qui calcule la taile d'une liste
 int taill_list(etudiant *tete){
@@ -72,7 +84,7 @@ int taill_list(etudiant *tete){
 
 int main (){
 	//cree un poiteur de type etudiant
-	 etudiant *tete;
+	 etudiant *tete = NULL;//eleminer gabreage value
 
 	//creation des champs et remplisage
 	etudiant *premier = cree_etudiant ( 22 , 16.20 , "walid" );
@@ -90,7 +102,7 @@ int main (){
 
 
 	//appelant la fct taill_list pour calculer la taill
-	//printf ("la taille de votre liste est : %d",taill_list(tete);
+	//printf ("la taille de votre liste est : %d",taill_list(tete));
 	
 
 	//appelant la fct search_liste mais avant 
@@ -101,6 +113,16 @@ int main (){
         //else {
         //    printf ("age = %d \n moyenne = %.1f", resultat->age ,resultat->moyenne);
         //}
+	
+	tete=add_first_list(tete, 30,11.8,"ali");//tete point sur la nouveau noed
+						
 
-	return 0;
+	//liberer lespace
+	etudiant *courant = tete;
+    while (courant != NULL) {
+        etudiant *temp = courant;
+        courant = courant->suivant;
+        free(temp);
+    }
+    return 0;
 }
