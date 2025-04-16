@@ -26,15 +26,15 @@ etudiant * search_element(etudiant * tete , char c[]){
     return NULL;
 }
 
-//creation du fonction qui alloue ynamiquement de la memoire et initialise les champs 
-// fonction avec type de retoure etudiant
+//creation du fonction qui alloue dynamiquement de la memoire et initialise les champs 
+// fonction avec type de retour etudiant
 etudiant * cree_etudiant( int _age, float _moyenne, char _name[] ){
 
 	etudiant *nv_etudiant = ( etudiant* ) malloc ( sizeof(etudiant) );
 	
 	//verifier si ya de espace memoire pour ce element 
 	if (nv_etudiant == NULL)
-		return NULL;//on peut pas return -1 car type de retour de la fonction  est un poiteur
+		return NULL;//on peut pas return -1 car type de retour de la fonction  est un pointeur
 
 	nv_etudiant -> age = _age;
 	nv_etudiant -> moyenne = _moyenne;
@@ -45,7 +45,7 @@ etudiant * cree_etudiant( int _age, float _moyenne, char _name[] ){
 
 
 
-//affich les element de la liste etudiant 
+//affich les elements de la liste etudiant 
 void affich_list(etudiant *tete){
     etudiant *courant =tete;
     while (courant != NULL ){
@@ -57,7 +57,7 @@ void affich_list(etudiant *tete){
 }
 
 
-// ajout un element au debut du liste
+// ajout un element au debut du list
 etudiant* add_first_list(etudiant *tete, int _age, float _moyenne, char _name[]) {
     etudiant *nv = cree_etudiant(_age, _moyenne, _name);
     if (nv == NULL) {
@@ -70,28 +70,28 @@ etudiant* add_first_list(etudiant *tete, int _age, float _moyenne, char _name[])
 }
 
 
-//fct qui calcule la taile d'une liste
+//fct qui calcule la taile d'une list
 int taill_list(etudiant *tete){
     int i=0;
-    etudiant *courant=tete;
+    etudiant *courant = tete;
     while (courant != NULL){
         i++;
-        courant= courant ->suivant;
+        courant = courant ->suivant;
     }
     return i;
 }
 
 
 int main (){
-	//cree un poiteur de type etudiant
-	 etudiant *tete = NULL;//eleminer gabreage value
+	//cree un pointeur de type etudiant
+	 etudiant *tete = NULL;//eliminer garbage value
 
 	//creation des champs et remplisage
 	etudiant *premier = cree_etudiant ( 22 , 16.20 , "walid" );
 	etudiant *deuxiemme = cree_etudiant ( 21 , 11.80 , "chaimae" );
 	etudiant *queue = cree_etudiant ( 25 , 17.50 , "zakaryae" );
 
-	//lie les nodes de la structure
+	//liee les nodes de la structure
 	tete = premier;
 	premier -> suivant = deuxiemme;
 	deuxiemme -> suivant = queue;
@@ -114,7 +114,7 @@ int main (){
         //    printf ("age = %d \n moyenne = %.1f", resultat->age ,resultat->moyenne);
         //}
 	
-	tete=add_first_list(tete, 30,11.8,"ali");//tete point sur la nouveau noed
+	//tete=add_first_list(tete, 30,11.8,"ali");//tete point sur la nouveau noed
 						
 
 	//liberer lespace
