@@ -57,8 +57,8 @@ void affich_list(etudiant *tete){
 }
 
 
-// ajout un element au debut du list
-etudiant* add_first_list(etudiant *tete, int _age, float _moyenne, char _name[]) {
+// ajout un element au debut du list par valeur 
+etudiant* add_first_list_val(etudiant *tete, int _age, float _moyenne, char _name[]) {
     etudiant *nv = cree_etudiant(_age, _moyenne, _name);
     if (nv == NULL) {
         printf("Erreur d'allocation de mémoire.\n");
@@ -69,6 +69,17 @@ etudiant* add_first_list(etudiant *tete, int _age, float _moyenne, char _name[])
     return tete;
 }
 
+//mais le ttype de retur et void 
+void add_first_list_adr(etudiant **tete, e, int _age, float _moyenne, char _name[]) {
+    etudiant *nv = cree_etudiant(_age, _moyenne, _name);
+    if (nv == NULL) {
+        printf("Erreur d'allocation de mémoire.\n");
+        return tete;
+    }
+    nv->suivant = *tete;
+    *tete = nv;
+    return tete;
+}
 
 //fct qui calcule la taile d'une list
 int taill_list(etudiant *tete){
@@ -105,7 +116,7 @@ int main (){
 	//printf ("la taille de votre liste est : %d",taill_list(tete));
 	
 
-	//appelant la fct search_liste mais avant 
+	/*appelant la fct search_liste mais avant 
         //char c[]="walid";
         //etudiant * resultat =search_element(tete,c);
         //if (resultat == NULL)
@@ -113,9 +124,14 @@ int main (){
         //else {
         //    printf ("age = %d \n moyenne = %.1f", resultat->age ,resultat->moyenne);
         //}
-	
-	//tete=add_first_list(tete, 30,11.8,"ali");//tete point sur la nouveau noed
-						
+	*/
+
+	/* obliger de renitialiser l'adrees qui est dans le tete car elle est changer 
+	tete=add_first_list-val(tete, 30,11.8,"ali");//tete point sur la nouveau noed
+	*/
+
+	/* pour cette methode c pas grave car c'est un passage par adresse
+	 add_first_list_adr(&tete);
 
 	//liberer lespace
 	etudiant *courant = tete;
