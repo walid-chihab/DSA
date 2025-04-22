@@ -82,10 +82,12 @@ void add_first_list_adr(etudiant **tete, e, int _age, float _moyenne, char _name
 }
 
 //ajouter nv_element a la fin de liste
-//void add_last_list (etudiant *tete, char _name[], float _moyenne ,int  _age )
+void add_last_list (etudiant *tete, char _name[], float _moyenne ,int  _age )
 {
     etudiant *nv_etudiant = cree_etudiant( _name, _moyenne ,  _age);
     etudiant *courant =tete;
+
+    if (tete == NULL) return ;
     while (courant ->suivant != NULL){
         courant = courant ->suivant;
     }
