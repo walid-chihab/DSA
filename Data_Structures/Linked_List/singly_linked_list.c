@@ -115,6 +115,15 @@ void add_midl_list (etudiant **tete , char name ,float _moyenne, inta _age ){
     nv_e ->suivant = initialise;
 }
 
+void    sup_prm_elem_list(etudiant ** tete)//appeler dans le main et sera direct
+{
+    if (*tete == NULL) return ;
+    etudiant *courant = * tete ;
+    *tete = (*tete) ->suivant ;
+    free(courant);
+}
+
+
 
 
 //fct qui calcule la taile d'une list
@@ -178,7 +187,7 @@ int main (){
 
 	//appelde fct midll_list 
 	//add_midl_list(&tete, "yassin",19.3, 25);  
-        //add_midl_list(&tete, "fatin", 16.02, 20);
+        //add_midl_list(&tete, "fatin", 16.02, 0);
 
 	//liberer lespace
 	etudiant *courant = tete;
