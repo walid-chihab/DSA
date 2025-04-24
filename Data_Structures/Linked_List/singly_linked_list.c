@@ -94,6 +94,27 @@ void add_last_list (etudiant *tete, char _name[], float _moyenne ,int  _age )
     courant ->suivant = nv_etudiant;
 }
 
+void add_midl_list (etudiant **tete , char name ,float _moyenne, inta _age ){
+    int i=0 , j=0;
+    etudiant *initialise ;
+    etudiant *courant = *tete;
+    etudiant *nv_e = cree_etudiant ( _name , _moyenne ,_age);
+    while(courant -> suivant != NULL){
+        courant = courant -> suivant;
+        i++;
+    }
+    i = i/2;
+    courant = *tete;
+    while (j < i){
+        courant = courant -> suivant;
+    }
+    //pour n'obliant pas l'autre partie du list
+    initialise = courant ->suivant ;
+
+    courant -> suivant = nv_e;
+    nv_e ->suivant = initialise;
+}
+
 
 
 //fct qui calcule la taile d'une list
@@ -154,6 +175,10 @@ int main (){
 		add_last_list(tete,"wasim" , 16.98 , 23);
 		affich_list(tete);
 	*/
+
+	//appelde fct midll_list 
+	//add_midl_list(&tete, "yassin",19.3, 25);  
+        //add_midl_list(&tete, "fatin", 16.02, 20);
 
 	//liberer lespace
 	etudiant *courant = tete;
