@@ -43,15 +43,19 @@ void	affich_patient(patient *tete){
 }
 
 void  age_patient(patient *tete){
+	if (tete == NULL){
+		printf ("list patient vide!");
+		return;
+	}
 	patient *courant = tete;
-	int max_age = -1;
+	patient *max_age = tete;
 	while (courant != NULL){
-		if (courant->age > max_age){
-			max_age = courant->age;
+		if (courant->age > max_age->age){
+			max_age = courant;
 		}
 		courant=courant->suivant;
 	}
-	printf("le plus grand patient est %s -%s de %d ans",courant->nom,courant->prenom,courant->age);
+	printf("le plus grand patient est %s -%s de %d ans",max_age->nom,max_age->prenom,max_age->age);
 }
 
 int main (){
