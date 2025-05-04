@@ -74,11 +74,11 @@ void add_first_list_adr(etudiant **tete, e, int _age, float _moyenne, char _name
     etudiant *nv = cree_etudiant(_age, _moyenne, _name);
     if (nv == NULL) {
         printf("Erreur d'allocation de mémoire.\n");
-        return tete;
+        return;
     }
     nv->suivant = *tete;
     *tete = nv;
-    return tete;
+    return;
 }
 
 //ajouter nv_element a la fin de liste
