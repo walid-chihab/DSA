@@ -13,10 +13,10 @@
 /*		iiii. Une fonction pour la requête 3						*/
 /************************************************************************************************/
 
-#include <unistd.h>
-#include <stdio.h>
-#include<string.h>
-#include <stdlib.h>
+# include <unistd.h>
+# include <stdio.h>
+# include <string.h>
+# include <stdlib.h>
 
 typedef struct coup{
 	char equip[50];
@@ -39,7 +39,6 @@ coup	*cree_coup(char _equip, int _annes){
 	return nv_coup;
 }
 
-
 //cette fct il faut repodre a ce qst.` Quelle est l’équipe qui a emporté la coupe en l’année X `
 void 	compt_coup(coup *tete , int _annes ){
 
@@ -49,7 +48,7 @@ void 	compt_coup(coup *tete , int _annes ){
 			printf("%s est l'equipe qui gagne la coup %d",courant->equip, _annes);
 			return;
 		}
-	}
+	}v
 	printf ("y-a-pas d'equipe qui gagne la coupe dans %d",_annes);
 }
 
