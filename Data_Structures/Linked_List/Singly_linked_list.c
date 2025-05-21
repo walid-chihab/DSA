@@ -52,7 +52,7 @@ void affich_list(etudiant *tete){
         printf ("(name = %s , age = %d , moyenne = %.1f ) ~>",courant ->name, courant->age ,courant->moyenne);
         courant = courant-> suivant;//poit sur la suivant du dernier node
     }
-    printf("NULL");//
+    printf("NULL");//on point la fin de list
     
 }
 
