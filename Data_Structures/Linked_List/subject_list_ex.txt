@@ -1,0 +1,75 @@
+Exercice 1 (s1)
+On considère l’ensemble des patients qui arrivent chez un médecin, à priori on ne
+connaît pas le nombre de personnes qui peuvent joindre le cabinet. C’est pour cela on
+préfère utiliser les listes chainées. A l’entrée on note le nom, le prénom et l’âge du
+patient.
+1. Faire les déclarations nécessaires en C.
+2. Ecrire la fonction qui permet d’enregistrer les informations des patients.
+3. Quel est l’avantage de l’utilisation d’une liste chaînée au lieu d’un tableau ?
+4. Ajouter une fonction qui permet de lister l’ensemble des patients.
+5. Ajouter une fonction qui permet de chercher le patient le plus âgé.
+6. Ecrire le programme appelant.
+		-------------------------------------------------------
+
+
+Exercice 2 (s1)
+On considère la liste des coupes du football au Maroc, on veut décrire une structure de
+données adéquate pour pouvoir répondre aux requêtes suivantes :
+1. Quelle est l’équipe qui a emporté la coupe en l’année X ?
+2. Combien de fois une équipe E a t- elle emporté la coupe ?
+3. En quelle année une équipe E a t- elle emporté la coupe pour la dernière fois ?
+a. Proposer une structure de données pour représenter le problème, justifier.
+b. Faite les déclarations nécessaires en langage C.
+c. Ecrire un programme faisant appel aux fonctions suivantes :
+ Une fonction pour la création de la liste
+ Une fonction pour la requête 1
+ Une fonction pour la requête 2
+ Une fonction pour la requête 3
+		---------------------------------------------------------
+
+
+Exercice 1 (s2)
+
+Écrire une fonction qui supprime tous les maillons contenant l'entier x dans une
+liste chaînée.
+Exemple :
+ Liste en entrée : 7 → -18 → 0 → 7 → 45 → 87 → 7 → -5 → NULL
+ Suppression de x = 7 → Résultat : -18 → 0 → 45 → 87 → -5 → NULL.
+		---------------------------------------------------------
+
+
+Exercice 2
+
+Écrire une fonction qui ordonne une liste chaînée par ordre croissant sans créer
+de maillon supplémentaire.
+Exemple :
+ Liste en entrée : 7 → -18 → 0 → 7 → 45 → 87 → 7 → -5 → NULL
+ Résultat après tri : -18 → -5 → 0 → 7 → 7 → 7 → 45 → 87 → NULL (tri
+sans ajouter de maillons).
+		---------------------------------------------------------
+
+
+Exercice 3
+Fusionner deux listes triées en une seule liste triée sans créer de nouveaux
+maillons.
+Exemple :
+ Liste 1 : 2 → 5 → 10 → NULL
+ Liste 2 : 3 → 7 → 12 → NULL
+ Résultat : 2 → 3 → 5 → 7 → 10 → 12 → NULL.
+		---------------------------------------------------------
+
+
+Exercice 4
+Inverser l’ordre d’une liste chaînée en modifiant uniquement les liens.
+Exemple :
+ Entrée : A → B → C → D → NULL → Sortie : D → C → B → A →
+NULL.
+		---------------------------------------------------------
+
+
+Exercice 5
+Trouver le maillon central en un seul parcours avec deux pointeurs (rapide et
+lent).
+Exemple :
+ Liste : 1 → 2 → 3 → 4 → 5 → NULL → Milieu : 3.
+ Liste : 1 → 2 → 3 → 4 → NULL → Milieu : 2 (ou 3 selon la convention).
