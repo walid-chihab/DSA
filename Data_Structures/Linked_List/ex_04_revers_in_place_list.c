@@ -6,9 +6,9 @@
  */
 
 void	inverserListe(Node** tete) {
-	Node* precedent = NULL;
+	Node* precedent = NULL;//pour donne le next fu premier noed la val NULL
 	Node* courant = *tete;
-	Node* suivant = NULL;
+	Node* suivant = NULL;//on renitialiser dans la boucle 
 
 	while (courant != NULL) {
 		suivant = courant->next;
