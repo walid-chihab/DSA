@@ -1,4 +1,4 @@
-Exercice 1 (s1)
+Exercice 1 (s1) --->mini_project patients
 On considère l’ensemble des patients qui arrivent chez un médecin, à priori on ne
 connaît pas le nombre de personnes qui peuvent joindre le cabinet. C’est pour cela on
 préfère utiliser les listes chainées. A l’entrée on note le nom, le prénom et l’âge du
@@ -12,7 +12,7 @@ patient.
 		-------------------------------------------------------
 
 
-Exercice 2 (s1)
+Exercice 2 (s1)--->mini_ project football
 On considère la liste des coupes du football au Maroc, on veut décrire une structure de
 données adéquate pour pouvoir répondre aux requêtes suivantes :
 1. Quelle est l’équipe qui a emporté la coupe en l’année X ?
@@ -62,8 +62,7 @@ Exemple :
 Exercice 4
 Inverser l’ordre d’une liste chaînée en modifiant uniquement les liens.
 Exemple :
- Entrée : A → B → C → D → NULL → Sortie : D → C → B → A →
-NULL.
+ Entrée : A → B → C → D → NULL → Sortie : D → C → B → A → NULL.
 		---------------------------------------------------------
 
 
