@@ -38,7 +38,7 @@ Node* init_stack() {
 //3.Empiler
 Node* push(Node* top, char value) {
 	Node* nv_Node = (Node*) malloc(sizeof(Node));
-	if (!nv_ode) {
+	if (!nv_Node) {
 		printf("Erreur d'allocation mémoire\n");
 		exit(1);
 	}
@@ -46,7 +46,6 @@ Node* push(Node* top, char value) {
 	nv_Node->next = top;
 	return nv_Node;//cette node qu'on va returner va etre le nouveau top mais dans le main
 	}
-}
 
 //4.depiler un caractere
 Node* pop(Node* top) {
