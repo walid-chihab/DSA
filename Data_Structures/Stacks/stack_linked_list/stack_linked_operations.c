@@ -64,3 +64,17 @@ Node* pop(Node* top) {
 }
 
 
+void print_stack(Node* top) {
+    if (top == NULL) {
+        printf("La pile est vide.\n");
+        return; //c quoi le vraiment deffirence entre exit et return
+    }
+
+    printf("Contenu de la pile (du sommet vers la base) :\n");
+    while (top != NULL) {
+        printf("%c\n", top->data);
+        top = top->next;
+    }
+}
+
+
