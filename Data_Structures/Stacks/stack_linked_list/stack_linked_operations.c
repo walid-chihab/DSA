@@ -37,17 +37,18 @@ Node* init_stack() {
 
 //3.Empiler
 Node* push(Node* top, char value) {
-    Node* newNode = (Node*) malloc(sizeof(Node));
-    if (!newNode) {
-        printf("Erreur d'allocation mémoire\n");
-        exit(1);
-    }
-    newNode->data = value;
-    newNode->next = top;
-    return newNode;//cette node qu'on va returner va etre le nouveau top mais dans le main
+	Node* nv_Node = (Node*) malloc(sizeof(Node));
+	if (!nv_ode) {
+		printf("Erreur d'allocation mémoire\n");
+		exit(1);
+	}
+	nv_Node->data = value;
+	nv_Node->next = top;
+	return nv_Node;//cette node qu'on va returner va etre le nouveau top mais dans le main
+	}
 }
 
-//4.depiler
+//4.depiler un caractere
 Node* pop(Node* top) {
     if (top == NULL) {
         printf("La pile est vide, rien à dépiler.\n");
@@ -63,7 +64,16 @@ Node* pop(Node* top) {
     return top;
 }
 
+//5.vider le pile
+Node *vider(Node *top){
+	while (top != NULL){
+		top = pop(top);
+	}
+	return top;
+}
 
+
+//6.aficher les caracters du pile 
 void print_stack(Node* top) {
     if (top == NULL) {
         printf("La pile est vide.\n");
