@@ -44,5 +44,5 @@ Node* push(Node* top, char value) {
     }
     newNode->data = value;
     newNode->next = top;
-    return newNode;
+    return newNode;//cette node qu'on va returner va etre le nouveau top mais dans le main
 }
