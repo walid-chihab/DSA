@@ -46,3 +46,21 @@ Node* push(Node* top, char value) {
     newNode->next = top;
     return newNode;//cette node qu'on va returner va etre le nouveau top mais dans le main
 }
+
+//4.depiler
+Node* pop(Node* top) {
+    if (top == NULL) {
+        printf("La pile est vide, rien à dépiler.\n");
+        return NULL;
+    }
+
+    printf("Élément dépilé : %c\n", top->data);
+
+    Node* temp = top;
+    top = top->next;
+    free(temp); // Libérer l'ancienne tête
+
+    return top;
+}
+
+
