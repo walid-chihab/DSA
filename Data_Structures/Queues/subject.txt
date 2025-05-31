@@ -1,0 +1,10 @@
+ex:01
+On considère une file illimitée de fichiers à imprimer. Ces fichiers, étant
+identifiés par leurs noms et leurs tailles, se mettent en file d’attente, de façon
+que le premier fichier envoyé sera le premier à être imprimé.
+On demande :
+1. De définir la structure adéquate pour représenter cette file.
+2. Une fonction qui permet d’initialiser la file.
+3. Une fonction qui permet d’ajouter un fichier à la file.
+4. Une fonction qui permet de supprimer un fichier de la file.
+5. Une fonction qui permet d’afficher le contenu de la file.

@@ -57,4 +57,4 @@ void init_queue(Fichier **tete,Fichier **queue){
 		*queue->next = nv_fichier;
 		*queue= nv_fichier;
 	}
- }
+
