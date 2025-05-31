@@ -37,3 +37,15 @@ Node* inserer(Node* racine, int val) {
     // Si la valeur est égale, ne rien faire (valeurs distinctes)
     return racine;  // Retourner la racine inchangée
 }
+
+// Fonction pour créer un arbre binaire de recherche à partir d’un tableau d'entiers
+Node* creer_arbre(int tab[], int n) {
+    Node* racine = NULL; // Commencer par une racine vide
+    for (int i = 0; i < n; i++) {
+        racine = inserer(racine, tab[i]); // Insérer chaque élément du tableau dans l’arbre
+    }
+    return racine; // Retourner la racine de l’arbre formé
+}
+
+
+
