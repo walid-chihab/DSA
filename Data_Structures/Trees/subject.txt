@@ -1,0 +1,46 @@
+
+
+Exercice 1
+On veut représenter un vecteur contenant des nœuds entiers distincts
+chargés d’une manière aléatoire, en utilisant un arbre binaire.
+L’insertion d’un élément dans l’arbre se fait d’une manière ordonnée,
+l’élément est inséré à gauche ou à droite d’un nœud du sous arbre,
+selon que l’entier est inférieur ou supérieur à celui que contient le
+nœud.
+Exemple
+
+6 8 4 9 3 5
+
+Ecrire un programme qui fait appel à :
+1. Une fonction qui permet de créer l’arbre à partir du vecteur.
+2. Une fonction qui permet de supprimer un nœud de l’arbre.
+3. Une fonction qui permet d’afficher le résultat du parcours infixé
+4. Une fonction qui permet d’afficher le résultat du parcours préfixé
+5. Une fonction qui permet d’afficher le résultat du parcours postfixé
+Exercice 2
+On considère un texte à saisir mot par mot, on veut construire un
+arbre lexicographique permettant de placer les mots dans l’arbre et de
+
+	      6
+
+	4          8
+         	   
+     3     5         9     
+ 
+Page 2 sur 2
+compter le nombre d’apparition d’un même mot. Au début du
+traitement l’arbre est vide, il sera construit au fur et à mesure de la
+lecture des mots du texte.
+Faire la déclaration de la structure d’un nœud de l’arbre considéré.
+Ecrire un programme qui utilise :
+1. Une fonction qui permet de placer le mot à la place requise.
+2. Une fonction qui crée l’arbre en question et qui fait appel à la
+fonction prédéfinie en 1.
+3. Une fonction qui permet d’afficher le résultat du parcours préfixé
+avec indentation
+4. Une fonction qui permet de calculer la taille de l’arbre.
+5. Une fonction qui permet de chercher un nœud dans l’arbre.
+6. Une fonction booléenne qui permet de tester si ce nœud est une
+feuille ou pas.
+7. Une fonction qui permet de lister les feuilles de l’arbre. NB : on peut
+faire appel dans cette fonction à la fonction définie en 6.
