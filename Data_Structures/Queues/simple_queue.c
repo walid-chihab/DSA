@@ -80,3 +80,17 @@ void supprimer_Fichier(Fichier **tete, Fichier **queue) {
     
     free(temp);                  // Libérer la mémoire de l'ancien premier fichier
 }
+
+
+//5.affich les elements du list
+void afficher(Fichier *tete) {//pas de retour 
+    if (tete == NULL) {//passage par valeur sufisant
+        printf("La file est vide.\n");
+        return;
+    }
+
+    while (tete != NULL) {
+        printf("Nom: %s, Taille: %d octets\n", tete->nom, tete->taill);
+        tete = tete->next;
+    }
+}
