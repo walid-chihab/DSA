@@ -50,11 +50,13 @@ void init_queue(Fichier **tete,Fichier **queue){
 	printf ("entrer la taille de ce fichier en octet");
 	scanf("%d",&nv_fichier->taill);//il faut fair & pour stocker l'adresse et pas la val (crash)
 	
+
+	nv_fichier->next = NULL;
 	//1 ere cas si la tete et queue s'ont null c-a-d le file est vide
 	if (*tete ==NULL)
-		*tete=*queue=NULL;	
+		(*tete)=(*queue)=nv_fichier;	
 	else{
-		*queue->next = nv_fichier;
-		*queue= nv_fichier;
+		(*queue)->next = nv_fichier;
+		(*queue)= nv_fichier;
 	}
-
+}
