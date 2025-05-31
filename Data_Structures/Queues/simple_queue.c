@@ -37,7 +37,7 @@ void init_queue(Fichier **tete,Fichier **queue){
 	*queue = NULL;
 }
 
-//3.ajouter un fichier a la file
+//3.ajouter un fichier a la file a la fin du file 
  void ajout_Fichier(Fichier **tete, Fichier **queue){
 	 //allocation dynamique
 	 Fichier *nv_fichier = (Fichier*) malloc (sizeof(Fichier));
@@ -59,4 +59,24 @@ void init_queue(Fichier **tete,Fichier **queue){
 		(*queue)->next = nv_fichier;
 		(*queue)= nv_fichier;
 	}
+}
+
+//4. suprimer un fichier du file au debut
+void supprimer_Fichier(Fichier **tete, Fichier **queue) {
+    // Vérifier si la file est vide
+    if (*tete == NULL) {
+        printf("La file est vide, rien à supprimer.\n");
+        return;
+    }
+    
+    Fichier *temp = *tete;       // Sauvegarder le premier fichier à supprimer
+    *tete = (*tete)->next;       // Avancer la tête vers le fichier suivant
+    
+    // Si la file devient vide après la suppression
+    // ce condition est specificement pour le dernier element du file 
+    if (*tete == NULL) {
+        *queue = NULL;           // Mettre aussi la queue à NULL
+    }
+    
+    free(temp);                  // Libérer la mémoire de l'ancien premier fichier
 }
