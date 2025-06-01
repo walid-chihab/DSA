@@ -22,10 +22,10 @@ arbre lexicographique permettant de placer les mots dans l’arbre et de
 	| 6 | 8 | 4 | 9 | 3 | 5 |
 	|_______________________|
 	      6
-           /     \    
-	  4       8
-        /  \	    \
-       3    5        9     
+            /   \    
+	  4      8
+        /  \	   \
+       3    5       9     
  
 compter le nombre d’apparition d’un même mot. Au début du
 traitement l’arbre est vide, il sera construit au fur et à mesure de la
