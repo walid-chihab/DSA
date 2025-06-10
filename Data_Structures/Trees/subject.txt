@@ -7,17 +7,6 @@ selon que l’entier est inférieur ou supérieur à celui que contient le
 nœud.
 Exemple
 
-6 8 4 9 3 5
-
-Ecrire un programme qui fait appel à :
-1. Une fonction qui permet de créer l’arbre à partir du vecteur.
-2. Une fonction qui permet de supprimer un nœud de l’arbre.
-3. Une fonction qui permet d’afficher le résultat du parcours infixé
-4. Une fonction qui permet d’afficher le résultat du parcours préfixé
-5. Une fonction qui permet d’afficher le résultat du parcours postfixé
-Exercice 2(  exicographic_control_tree)
-On considère un texte à saisir mot par mot, on veut construire un
-arbre lexicographique permettant de placer les mots dans l’arbre et de
 	 _______________________
 	| 6 | 8 | 4 | 9 | 3 | 5 |
 	|_______________________|
@@ -25,8 +14,18 @@ arbre lexicographique permettant de placer les mots dans l’arbre et de
             /   \    
 	  4      8
         /  \	   \
-       3    5       9     
- 
+       3    5       9    
+
+Ecrire un programme qui fait appel à :
+1. Une fonction qui permet de créer l’arbre à partir du vecteur.
+2. Une fonction qui permet de supprimer un nœud de l’arbre.
+3. Une fonction qui permet d’afficher le résultat du parcours infixé
+4. Une fonction qui permet d’afficher le résultat du parcours préfixé
+5. Une fonction qui permet d’afficher le résultat du parcours postfixé
+======================================================================================================================
+Exercice 2(  exicographic_control_tree)
+On considère un texte à saisir mot par mot, on veut construire un
+arbre lexicographique permettant de placer les mots dans l’arbre et de 
 compter le nombre d’apparition d’un même mot. Au début du
 traitement l’arbre est vide, il sera construit au fur et à mesure de la
 lecture des mots du texte.
