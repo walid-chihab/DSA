@@ -48,4 +48,64 @@ Node* creer_arbre(int tab[], int n) {
 }
 
 
+// Définition de la fonction de suppression d'un nœud dans un arbre binaire de recherche
+Node* deleteNode(Node* root, int key) {
+    // Si l'arbre est vide ou si on atteint une feuille vide, rien à supprimer
+    if (root == NULL)
+        return NULL;
+
+    // Si la valeur à supprimer est plus petite que la valeur du nœud actuel,
+    // on continue la recherche dans le sous-arbre gauche
+    if (key < root->valeur) {
+        root->gauche = deleteNode(root->gauche, key);
+    }
+    // Si la valeur à supprimer est plus grande que la valeur du nœud actuel,
+    // on continue la recherche dans le sous-arbre droit
+    else if (key > root->valeur) {
+        root->droite = deleteNode(root->droite, key);
+    }
+    // Sinon, on a trouvé le nœud à supprimer
+    else {
+        // Cas 1 : le nœud n’a pas d’enfants (feuille)
+        if (root->gauche == NULL && root->droite == NULL) {
+            free(root);        // On libère la mémoire
+            return NULL;       // Et on retourne NULL pour déconnecter ce nœud
+        }
+
+        // Cas 2 : le nœud a un seul enfant à droite
+        if (root->gauche == NULL) {
+            Node* temp = root->droite; // On garde un pointeur vers le fils droit
+            free(root);                // On libère le nœud actuel
+            return temp;               // Et on retourne le fils droit
+        }
+
+        // Cas 3 : le nœud a un seul enfant à gauche
+        if (root->droite == NULL) {
+            Node* temp = root->gauche; // On garde un pointeur vers le fils gauche
+            free(root);                // On libère le nœud actuel
+            return temp;               // Et on retourne le fils gauche
+        }
+
+        // Cas 4 : le nœud a deux enfants
+        // On cherche le plus petit nœud dans le sous-arbre droit (le successeur)
+        Node* succParent = root;
+        Node* succ = root->droite;
+        while (succ->gauche != NULL) {
+            succParent = succ;
+            succ = succ->gauche;
+        }
+
+        // On remplace la valeur du nœud courant par celle du successeur
+        root->valeur = succ->valeur;
+
+        // Puis on supprime le successeur à sa position d'origine
+        if (succParent == root)
+            succParent->droite = deleteNode(succParent->droite, succ->valeur);
+        else
+            succParent->gauche = deleteNode(succParent->gauche, succ->valeur);
+    }
+
+    // On retourne la racine mise à jour
+    return root;
+}
 
