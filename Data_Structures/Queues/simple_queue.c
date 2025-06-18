@@ -3,7 +3,7 @@
 *  	       |
 *              |
 *              ▼
-*          │  'E'   │ ← top     
+*          │  'E'   │ ← queue     
 *          ├────────┤
 *          │  'D'   │
 *          ├────────┤
@@ -11,7 +11,7 @@
 *          ├────────┤
 *          │  'B'   │
 *          ├────────┤
-*          │  'A'   │ ← Base de la pile
+*          │  'A'   │ ← tete
 *              |
 *              |
 *              |
@@ -37,7 +37,7 @@ void init_queue(Fichier **tete,Fichier **queue){
 	*queue = NULL;
 }
 
-//3.ajouter un fichier a la file a la fin du file 
+//3.ajouter un fichier a la fin du file 
  void ajout_Fichier(Fichier **tete, Fichier **queue){
 	 //allocation dynamique
 	 Fichier *nv_fichier = (Fichier*) malloc (sizeof(Fichier));
