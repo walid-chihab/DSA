@@ -1,6 +1,6 @@
 /*
- *
- *
+ *   trouvon le milieu d'un liste 
+ *   par un seul passage de list
  *
  *
  *
