@@ -9,7 +9,8 @@ Ecrire :
 5. Une fonction qui permet de vider la pile.
 6. Une fonction qui permet d’afficher le contenu de la pile.
 
-	--------------------------------------------------
+	
+	===================================================================================
 Exercice 2
 On considère une file illimitée de fichiers à imprimer. Ces fichiers, étant
 identifiés par leurs noms et leurs tailles, se mettent en file d’attente, de façon

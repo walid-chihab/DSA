@@ -15,7 +15,7 @@
 *
 *           First In, Last Out
 *         
-*                 filo
+*                 lifo
 */	
 
 
