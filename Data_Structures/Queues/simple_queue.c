@@ -8,8 +8,8 @@
 *          │  'D'   │
 *          ├────────┤
 *          │  'C'   │
-*          ├────────┤
-*          │  'B'   │
+*    ^     ├────────┤
+*    |     │  'B'   │
 *          ├────────┤
 *          │  'A'   │ ← tete
 *              |
@@ -49,8 +49,7 @@ void init_queue(Fichier **tete,Fichier **queue){
 	scanf("%19s",nv_fichier->nom);//on fait pas & car va stocker ladresse du premier caractere du tab de caractere
 	printf ("entrer la taille de ce fichier en octet");
 	scanf("%d",&nv_fichier->taill);//il faut fair & pour stocker l'adresse et pas la val (crash)
-	
-
+				       //
 	nv_fichier->next = NULL;
 	//1 ere cas si la tete et queue s'ont null c-a-d le file est vide
 	if (*tete ==NULL)
