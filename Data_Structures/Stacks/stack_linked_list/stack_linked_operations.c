@@ -24,7 +24,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// 1
+// 1. creation du structure de la pile 
 typedef struct Node {
     char data;
     struct Node *next;
